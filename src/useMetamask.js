@@ -17,6 +17,7 @@ const chains = (chainId) => {
 };
 
 const useMetamask = () => {
+  if (typeof window === 'undefined') return {};
   const state            = useContext(MetaStateContext);
   const dispatch         = useContext(MetaDispatchContext);
   const _isMounted       = useRef(true);
